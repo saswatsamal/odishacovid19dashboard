@@ -1,0 +1,917 @@
+:root {
+  --headline: #ffffff;
+  --sub-headline: #c8c8c8;
+  --background: #022a34;
+  --text: #275961;
+  --white-text: #fbf2ea;
+  --white-text-light: #fbf2ea88;
+  --white-text-grey: #f0f0f0;
+  --recovered: #72c217;
+  --background-dark-blue: #1e1e30;
+  --background-dark-blue2: #232333;
+  --vaccine: rgb(216, 48, 102);
+  /* --background-dark-blue3:#159c42; */
+  /* --recovered:#28A745;; */
+  --active: #007bff;
+  --newcases: #d63152;
+  --totalcases: #883ed5;
+  /* --deceased:#ff073a; */
+  --dark-mode-bg:rgb(31, 27, 37);
+  --deceased: rgba(108, 117, 125, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  /* background: -webkit-gradient(linear,left top,left bottom, from(#275E77),to(#5FA7c4)); */
+  background-color: #8080806b;
+
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+    inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+}
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--white-text);
+  background-color: #000000;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  overflow: overlay;
+}
+
+/* //Navbar ended here */
+.headline {
+  padding: 30px;
+  margin-bottom: 10px;
+}
+.headline h1 {
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+span {
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 14px;
+
+  letter-spacing: 1.5px;
+}
+.table-responsive {
+  margin-bottom: 30px;
+}
+/* Background */
+.background {
+  padding-top: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  /* background-color: rgb(31, 43, 53); */
+  background-color: #000000;
+  height: fit-content;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+
+/* //Background */
+
+/* footer */
+footer {
+  /* border: 2px solid red; */
+  /* position: fixed; */
+  bottom: 0;
+  height: 120px;
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+  background: rgb(18, 19, 20);
+}
+
+footer .footer-element p {
+  text-align: center;
+  /* border: 1px solid green; */
+  margin: 0 auto;
+  height: 100%;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--white-text-light);
+}
+
+footer .footer-element p a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* //footer */
+.icons-set2 {
+  float: right;
+}
+.icons-set2 i {
+  padding: 6px;
+  margin-left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--sub-headline);
+  transition: 0.2s ease-out;
+  /* color: var(--buttons-Boston-before); */
+}
+.icons-set2 i:hover {
+  transition: 0.2s ease-in;
+  color: #8d8b8b;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+}
+
+/* Average Card */
+
+.maindata {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.maindata .row {
+  padding: 0;
+  margin: 10px;
+}
+.maindata .row .col-lg-3 {
+  padding-left: 0px;
+  margin-bottom: 10px;
+  padding-right: 0px;
+}
+.sqrcards {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 180px;
+  min-height: 100px;
+  max-height: 160px;
+  border-radius: 4px;
+  text-align: center;
+  /* background-color: #242233; */
+}
+
+.sqrcards .elements {
+  padding: 5px;
+  /* height:160px; */
+  /* border: 1px solid blue; */
+}
+
+.sqrcards .elements .cardheading h4 {
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+}
+.data {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-height: 90px;
+  font-size: 18px;
+}
+.data #active {
+  transform: translateY(26px);
+}
+.data p {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+.sqrcards .elements p {
+  /* margin-top: 5px; */
+  letter-spacing: 2px;
+  color: var(--newcases);
+  font-weight: 700;
+}
+.sqrcards .border-s {
+  width: 100%;
+  height: 5px;
+  /* background-color:var(--newcases); */
+}
+
+.deaths {
+  color: var(--deceased) !important;
+}
+.confr {
+  color: var(--newcases);
+}
+.active {
+  /* font-size: 22px; */
+  color: var(--active) !important;
+}
+.recover {
+  /* font-size: 22px; */
+  color: var(--recovered) !important;
+}
+
+#recov {
+  font-size: 22px;
+  color: var(--recovered);
+}
+
+#mort {
+  font-size: 22px;
+  color: var(--deceased);
+}
+
+.elec-group a {
+  text-decoration: none;
+  color: vAR(--active);
+  text-align: center;
+
+  /* border: 1px solid red; */
+  /* padding-top: 5px; */
+}
+
+.avgposratio {
+  font-size: 22px;
+  color: var(--deceased);
+}
+
+table {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 13px;
+  /* margin-bottom: 10px; */
+  /* transition: 0.5s; */
+  transition-delay: 4s;
+
+  /* border: 1px solid blue; */
+  /* padding: 10px; */
+}
+
+.tablerow {
+  margin: 0 auto;
+  display: flex;
+}
+.tablerow th {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* background-color: var(--background-dark-blue); */
+
+  background-color: rgb(245, 243, 243);
+  min-width: 120px;
+  max-width: 120px;
+  padding: 10px;
+  margin: 2px;
+  min-width: 120px;
+  font-weight: 700;
+  color: #6c757d;
+  border-radius: 3px;
+}
+.color {
+  background-color: rgb(245, 243, 243) !important;
+  /* background-color: var(--background-dark-blue) !important; */
+  font-weight: 700 !important;
+}
+tr:hover td {
+  transition: 0.2s all ease-in-out;
+  background-color: rgb(245, 243, 243) !important;
+}
+.tablerow td {
+  /* vertical-align: text-bottom; */
+  /* background-color: var(--background-dark-blue2); */
+  padding: 10px;
+  background-color: rgb(252, 252, 252);
+  margin: 2px;
+  min-width: 120px;
+  max-width: 120px;
+  max-height: fit-content;
+  font-weight: 600;
+  cursor: pointer;
+  color: #6c757d;
+  border-radius: 3px; 
+}
+.dataletterspacing {
+  letter-spacing: 1.3px;
+}
+
+.delta-confirmed {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--newcases);
+}
+.tests {
+  color: var(--totalcases);
+}
+.vaccinated {
+  color: rgb(219, 85, 129);
+}
+.recovered {
+  color: var(--recovered);
+}
+.deaths {
+  color: var(--deceased);
+}
+
+.fixedright {
+  position: sticky;
+  left: 0;
+}
+
+.card-rectangle {
+  max-width: 350px;
+  height: 40px;
+  outline: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #db558120;
+}
+.card-rectangle.size {
+  /* border-radius: 5px; */
+  max-width: 91.4%;
+  margin-bottom: 20px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  height: 50px;
+}
+
+.card-rectangle.size2 {
+  /* border-radius: 5px; */
+  max-width: 360px;
+  margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  height: 50px;
+}
+
+.card-rectangle .rec-elements p {
+  /* border: 1px solid green; */
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(219, 85, 129);
+}
+
+.card-rectangle .rec-elements a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.col-lg-3 {
+  padding: 0;
+  margin: 0px;
+}
+.col-xs-6 {
+  padding: 0;
+  margin: 0px;
+}
+
+.col-sm-6 {
+  margin: 0px;
+}
+
+.icon {
+  width: 50px;
+  transform: translateY(-5px);
+}
+
+.maindiv {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
+  width: 89%;
+  animation: .5s forwards;
+  border-radius: 4px;
+  /* background-color: rgba(80, 48, 155, 0.192); */
+  /* background-color: rgba(155, 48, 123, 0.192); */
+  background-color: var(--white-text-grey);
+}
+
+.heading {
+  /* border: 1px solid black; */
+  /* width: 340px; */
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  /* float: right; */
+  padding: 10px;
+}
+
+.heading h2 {
+  font-size: 16px;
+  color: #6c757d;
+  font-weight: 600;
+  text-align: center;
+}
+.vaccineslots {
+  /* border: 1px solid red; */
+  width: 325px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.vaccineslots input {
+  /* border: 1px solid blue; */
+  /* margin: 5px; */
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: rgb(250, 250, 250);
+  color: #6c757d;
+  transition: 0.4s all ease-in-out;
+}
+.vaccineslots input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  /* border: 1px solid #6c757d70; */
+}
+.vaccineslots button {
+  width: 100%;
+  /* margin: 5px; */
+  margin-top: 16px;
+  padding: 5px;
+  border: 2px solid rgba(80, 48, 155, 0.568);
+  background-color: rgb(98, 60, 187);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+  font-size: 14px;
+  /* width: 200px; */
+  text-align: center;
+}
+
+.vaccineslots button:hover {
+  background-color: rgb(80, 48, 155);
+}
+.vaccineslots button:active {
+  background-color: rgb(73, 43, 143);
+}
+.vaccineslots button:focus {
+  outline: none;
+}
+
+ul li {
+  color: black;
+}
+.results {
+  margin: 0 auto;
+  /* border: 1px solid orange; */
+  text-align: center;
+  /* padding: 10px; */
+  border-radius: 4px;
+  margin-top: 20px;
+  max-height: fit-content;
+}
+
+.results .centernames {
+  list-style: none;
+  display: block;
+  margin-left: 0px;
+  padding-left: 0px;
+  min-height: fit-content;
+}
+
+.results .centernames li {
+  margin: 0 auto;
+  min-width: 220px;
+  max-width: 300px;
+  /* max-height: 120px; */
+  max-height: fit-content;
+  /* background-color: #fff; */
+  border-radius: 3px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.results .centernames li .result-element {
+  display: flex;
+  max-height: fit-content;
+  align-items: center;
+  background-color: #fff;
+  /* border-radius: 3px; */
+  border-radius: 4px;
+  /* background-color: #fff; */
+  /* border-radius: 4px; */
+}
+
+.results .centernames li .result-element .hospitalname {
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px;
+  min-height: 110px;
+  max-height: fit-content;
+  border-radius: 4px 0px 0px 4px;
+  color: #fff;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /* box-sizing: border-box; */
+  /* background-color: rgb(157, 60, 187); */
+  background-color: rgb(98, 60, 187);
+}
+
+.results .centernames li .result-element .hospitalname h5 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.results .centernames li .result-element .hospitalname .hospital-address {
+  font-size: 12px;
+  font-weight: 400;
+}
+.results .centernames li .result-element .hospitalname .hospital-address p {
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+#feetype {
+  font-weight: 400 !important;
+}
+.results .centernames li .result-element .slotsavail {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+  /* border: 2px solid green; */
+}
+
+.results .centernames li .result-element .slotsavail h5 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #6c757d;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.results .centernames li .result-element .slotsavail h6 {
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 0px;
+}
+
+.maindiv .mainheading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.maindiv .mainheading h1 {
+  font-size: 35px;
+  font-weight: 900;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(98, 60, 187);
+  /* font-family: hez; */
+}
+
+.slotsavail .circle {
+  background-color: rgb(98, 60, 187);
+  /* position: relative; */
+  padding: 3px;
+  width: 100%;
+  border-radius: 0px 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto;
+
+  /* transform: translate(145px,-115px); */
+}
+.slotsavail .circle h6 {
+  color: #fff !important;
+  margin: 0 auto;
+  font-size: 10px;
+  font-weight: 600;
+}
+.free {
+  background-color: rgba(255, 255, 255, 0.316);
+  /* position: relative; */
+  padding: 1px;
+  width: 70px;
+  border-radius: 30px;
+  height: 16px;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  /* border-radius: 50%; */
+  /* transform: translate(145px,-115px); */
+}
+.free h6 {
+  color: #fff !important;
+  margin: 0 auto;
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+/* .doses {
+  float: right;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 0px 0px 3px 3px;
+  background-color: rgba(122, 91, 173, 0.74);
+} */
+/* .doses .dose1{
+  border: 1px solid green;
+  display: block;
+  margin: 5px;
+  
+}
+.doses .dose1 h6 {
+  color: rgb(98, 60, 187);
+  color: #fff;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 500;
+} */
+.notfound {
+  background-color: rgba(98, 60, 187, 0.521);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.notfound .notfoundtxt {
+  font-size: 12px;
+  color: #fff;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+
+.vaccinename {
+  /* border: 1px solid red; */
+  margin-bottom: 0px;
+}
+.vaccinename p {
+  margin-top: 5px;
+  font-size: 11px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+.download {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 325px;
+  padding: 10px;
+}
+.download h4 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.download input {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: rgb(250, 250, 250);
+  color: #6c757d;
+}
+.download button {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 10px;
+  outline: none;
+  color: #fff;
+  cursor: not-allowed;
+  border: 2px solid rgba(187, 60, 134, 0.452);
+  background-color: rgb(187, 60, 134);
+}
+
+.download p {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+/* Media queries */
+
+@media only screen and (max-width: 1100px) {
+  footer .footer-element p {
+   
+    float: none;
+  }
+  .icons-set2 {
+    float: none;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .fixedright {
+    position: sticky;
+    left: 0;
+  }
+
+  .heading {
+    /* border: 1px solid black; */
+    /* width:250px !important; */
+    /* text-align: center; */
+    margin-bottom: 10px;
+  }
+  .heading h2 {
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center !important;
+  }
+  .vaccineslots {
+    /* border: 2px solid green; */
+    width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .vaccineslots input {
+    /* border: 1px solid blue; */
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .vaccineslots button {
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: 12px;
+  }
+  .maindiv {
+    padding: 10px;
+    width: 98%;
+  }
+  footer .footer-element p {
+   
+    float: none;
+  }
+  .icons-set2 {
+    float: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    height: 140px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  footer .footer-element p {
+    text-align: center;
+    float: none;
+    /* border: 1px solid green; */
+    margin: 0 auto;
+    height: 100%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--white-text-light);
+  }
+
+  footer .footer-element p a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .maindiv .mainheading h1 {
+    font-size: 32px;
+  }
+  .icons-set2 {
+    float: none;
+  }
+  /* //footer */
+  .icons-set2 i {
+    padding: 6px;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--sub-headline);
+    transition: 0.2s ease-out;
+    /* color: var(--buttons-Boston-before); */
+  }
+  .card-rectangle.size2 {
+    width: 320px;
+  }
+
+
+}
+
+@media only screen and (max-width: 412px) {
+  .vaccineslots {
+    /* border: 2px solid green; */
+    width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .vaccineslots input {
+    /* border: 1px solid blue; */
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    /* padding: 8px; */
+    /* margin-bottom: 12px; */
+    /* font-size: 14px; */
+  }
+
+  .vaccineslots button {
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: 12px;
+  }
+
+  .heading {
+    width: 280px;
+    margin-top: 0px;
+  }
+  .heading h2 {
+    font-size: 16px;
+  }
+
+  .download {
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  footer {
+    padding-bottom: 20px;
+  }
+  .col-lg-12 {
+    padding: 5px;
+  }
+
+  .vaccineslots {
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .vaccineslots input {
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    /* padding: 8px; */
+    /* margin-bottom: 12px; */
+    /* font-size: 14px; */
+  }
+  .vaccineslots button {
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: 12px;
+  }
+  .heading {
+    width: 250px;
+    margin-top: 0px;
+  }
+  .heading h2 {
+    font-size: 16px;
+  }
+
+  .maindiv {
+    width: 100%;
+  }
+  .mainheading h1 {
+    font-size: 29px !important;
+  }
+  .download {
+    width: 250px;
+  }
+}
