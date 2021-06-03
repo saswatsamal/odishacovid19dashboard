@@ -65,6 +65,14 @@ body {
   margin-bottom: 30px;
   color: #ffffff;
 }
+.title-small {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 80;
+  margin-bottom: 30px;
+  color: #ffee00;
+}
 span {
   color: #6c757d;
   font-weight: 600;
