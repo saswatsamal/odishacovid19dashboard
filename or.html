@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta tags -->
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="" />
+  <meta name="description"
+    content="" />
+  <meta property="og:image" itemprop="image"
+    content="" />
+  <meta property="og:description"
+    content="">
+  <meta property="og:site_name" content="" />
+  <!--// Meta tags -->
+  <link rel="shortcut icon" type="image/png" href="">
+  <!-- Bootstrap -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- //Bootstrap -->
+  <!-- Font Awsome -->
+  <link rel="preconnect" href="path/to/font-awesome/css/font-awesome.min.css" />
+  <!-- //Font Awsome -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css" />
+  <!--// CSS -->
+
+  <title>Odisha COVID-19 Dashboard</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="title"><i class="fas fa-virus"></i> ଓଡ଼ିଶା ର କରୋନାଭାଇରସ୍ ଡ୍ୟାସବୋର୍ଡ |</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="maindata">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="sqrcards">
+                  <div class="elements">
+                    <div class="data">
+                      <span id="deltacnf" class="confr">+0</span>
+                      <p id="conf" class="confr">0</p>
+                    </div>
+                    <div class="cardheading">
+                      <h4>କରୋନା ଚିହ୍ନଟ</h4>
+                    </div>
+                  </div>
+                  <div class="border-s" id="conf-color"></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="sqrcards">
+                  <div class="elements">
+                    <div class="data">
+                      <p id="active" class="active">0</p>
+                    </div>
+                    <div class="cardheading">
+                      <span></span>
+                      <h4>ସକ୍ରିୟ</h4>
+                    </div>
+                  </div>
+                  <div class="border-s" id="conf-color"></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="sqrcards">
+                  <div class="elements">
+                    <div class="data">
+                      <span id="deltarecov" class="recover">+0</span>
+                      <p id="recovered" class="recover">0</p>
+                    </div>
+                    <div class="cardheading">
+                      <h4>ସୁସ୍ଥ ହୋଇଛନ୍ତି</h4>
+                    </div>
+                  </div>
+                  <div class="border-s" id="conf-color"></div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="sqrcards">
+                  <div class="elements">
+                    <div class="data">
+                      <span id="deltadeaths">+0</span>
+                      <p id="deaths" class="deaths">0</p>
+                    </div>
+                    <div class="cardheading">
+                      <h4>ଦେହାନ୍ତ</h4>
+                    </div>
+                  </div>
+                  <div class="border-s" id="conf-color"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="col-lg-12">
+            <div class="card-rectangle size">
+              <div class="rec-elements">
+                  <p class="verified-source">
+                    ଜିଲ୍ଲା କରୋନାଭାଇରସ୍ ର ତଥ୍ୟ
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr class="tablerow">
+                  <th class="fixedright">Districts / ଜିଲ୍ଲା</th>
+                  <th>Confirmed / କରୋନା ଚିହ୍ନଟ</th>
+                  <th>Active / ସକ୍ରିୟ</th>
+                  <th>Recovered / ସୁସ୍ଥ ହୋଇଛନ୍ତି</th>
+                  <th>Deceased / ଦେହାନ୍ତ</th>
+                  <th>Vaccine Doses Administered / ଭ୍ୟାକ୍ସିନ୍ ଡୋଜ୍ ବ୍ୟବହୃତ</th>
+                  <th>Tested / ପରୀକ୍ଷିତ</th>
+                  <th>Population / ଜନସଂଖ୍ୟା</th>
+                </tr>
+              </thead>
+              <tbody id="odisha">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card-rectangle size2">
+            <div class="rec-elements">
+              <a href="https://mo-tika.netlify.app/" target="_blank">
+                <p class="verified-source"><i class="fas fa-viruses"></i>ଖୋର୍ଡାରେ ଟୀକାକରଣ ଯାଞ୍ଚ କରନ୍ତୁ</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-element">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>ସାସ୍ୱତ ସାମଲ</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="icons-set2">
+              <a href="https://www.linkedin.com/in/saswatsamal/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/saswatsamal.py/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/saswatsamal" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/saswatsamal/odishacoviddashboard" target="_blank"><i class="fas fa-external-link-square-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/ff15909ecd.js"></script>
+  <script src="https://kit.fontawesome.com/340a598582.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="JS/data.js"async></script>
+  <script src="JS/state.js"async></script>
+  <script src="JS/cowinapi.js"async></script>
+</body>
+
+</html>
