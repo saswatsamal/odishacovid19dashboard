@@ -1,5 +1,5 @@
 async function getcovidapiInf() {
-    const jsondata2 = await fetch("https://api.covid19india.org/data.json");
+    const jsondata2 = await fetch("https://data.covid19india.org/data.json");
     const jsdata2 = await jsondata2.json();
     const dataforchart = jsdata2.statewise;
     const size = Object.keys(dataforchart).length;
