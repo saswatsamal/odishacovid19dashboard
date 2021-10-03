@@ -1,11 +1,11 @@
 async function getData(){
 
-  const jsondata2 = await fetch('https://api.covid19india.org/data.json');
+  const jsondata2 = await fetch('https://data.covid19india.org/data.json');
   const jsdata2 = await jsondata2.json();
   const dataforchart = jsdata2.statewise;
   const size = Object.keys(dataforchart).length;
 
-  const jsondata3 = await fetch('https://api.covid19india.org/v4/min/data.min.json');
+  const jsondata3 = await fetch('https://data.covid19india.org/v4/min/data.min.json');
   const dataj = await jsondata3.json();
   dataforchart.splice(30, 1);
 
@@ -56,16 +56,17 @@ if(isNaN(active)==true)
    
       dis[districts[i]].delta.vaccinated=0;
   }
-
+ 
   var template = `<tr class="tablerow">
                    <td class="fixedright color">${districts[i]}</td>
-                   <td class="dataletterspacing" > <span class="delta-confirmed"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.confirmed.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
+                   <td class="dataletterspacing" > <span class="delta-confirmed"><i class="fas fa-arrow-up"></i>${dis[districts[i]]?.delta?.confirmed?.toLocaleString('en-IN') ?? 0}</span><br>${dis[districts[i]].total.confirmed.toLocaleString('en-IN')}</td>
                    <td class="dataletterspacing"> ${active}</td>
-                   <td class="dataletterspacing"> <span class="delta-confirmed recovered"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.recovered.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
-                   <td class="dataletterspacing"> <span class="delta-confirmed deaths"><i class="fas fa-arrow-up"></i>${dis[districts[i]].delta.deceased.toLocaleString('en-IN')}</span><br>${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
-                   <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]].delta.vaccinated)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
-                   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.tested)}</td>
-                   <td class="dataletterspacing"> ${numDifferentiation(dis[districts[i]].meta.population)}</td>
+                   <td class="dataletterspacing"> <span class="delta-confirmed recovered"><i class="fas fa-arrow-up"></i>${dis[districts[i]]?.delta?.recovered.toLocaleString('en-IN') ?? 0}</span><br>${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
+                   <td class="dataletterspacing"> <span class="delta-confirmed deaths"><i class="fas fa-arrow-up"></i>${dis[districts[i]]?.delta?.deceased.toLocaleString('en-IN') ?? 0}</span><br>${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
+                   <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]]?.delta?.vaccinated1 ?? 0)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated1)}</td>
+                   <td class="dataletterspacing"> <span class="delta-confirmed vaccinated"><i class="fas fa-arrow-up"></i>${numDifferentiation(dis[districts[i]]?.delta?.vaccinated2 ?? 0)}</span><br>${numDifferentiation(dis[districts[i]].total.vaccinated2)}</td>
+                   <td class="dataletterspacing">${numDifferentiation(dis[districts[i]]?.total?.tested ?? "NA")}</td>
+                   <td class="dataletterspacing"> ${numDifferentiation(dis[districts[i]]?.meta?.population ?? "NA")}</td>
   </tr>`
   odisha.innerHTML += template;
 }
@@ -83,7 +84,8 @@ var template = `<tr class="tablerow">
 <td class="dataletterspacing">${active.toLocaleString('en-IN')}</td>
 <td class="dataletterspacing">${dis[districts[i]].total.recovered.toLocaleString('en-IN')}</td>
 <td class="dataletterspacing">${dis[districts[i]].total.deceased.toLocaleString('en-IN')}</td>
-<td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated)}</td>
+<td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated1)}</td>
+<td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.vaccinated2)}</td>
 <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].total.tested)}</td>
 <td class="dataletterspacing">${numDifferentiation(dis[districts[i]].meta.population)}</td>
 </tr>`
